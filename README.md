@@ -1,4 +1,2 @@
 # Chills
-Chill's Project
-Visual Basic: Windows App Form .NET
-Currently dealing with an issue when it comes to loading the JSON string file, the error prompt states that "An unexpected character was encountered while parsing value: r. Path", line 0, position 0.
+The programming language is going to be Python, and the backend framework for web development is going to be Django. Django is a full-stack framework, meaning it'll serve both the front end and the back end, but we need to check in greater detail what it can do.
