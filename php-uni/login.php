@@ -35,7 +35,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION["loggedin"] = true;
             $_SESSION["id"] = $row["id"];
             $_SESSION["username"] = $username;
-            header("location: welcome.php");
+            $id = $_SESSION['id'];
+            $roleQ = "SELECT role FROM users WHERE id = $id";
+            $result = $conn->query($roleQ);
+            while($row = $result->fetch_assoc()) {
+                if ($row['role'] == 'customer'){
+                    header("location: welcome.php");
+                } else {
+                    header("location: welcome-admin.php");
+                }
+            }
             exit;
         } else {
             $errorMsg = "Incorrect password!";
@@ -82,6 +91,8 @@ $conn->close();
             </div>
 
             <button type="submit">Login</button>
+
+            <p><a href="register.php">Register</a></p>
         </form>
     </div>
 

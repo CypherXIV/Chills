@@ -23,6 +23,7 @@ $conn->close();
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
     <style>
         .menu-container {
@@ -87,7 +88,7 @@ $conn->close();
 
         <div class="menu-controls">
             <button type="submit">Confirm Order</button>
-            <a href="login.php">Back to Login</a>
+            <a href="welcome.php">Back to Dashboard</a>
         </div>
     </form>
 
